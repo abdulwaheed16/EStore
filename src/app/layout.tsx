@@ -10,7 +10,7 @@ import AppLayout from "@component/layout/layout-1";
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Bonik - The Best React eCommerce Template",
+  title: "EShop - The Best online shop",
   description:
     "Bonik is a React Next.js E-commerce template. Build SEO friendly Online store, delivery app and Multi vendor store",
   authors: [{ name: "UI-LIB", url: "https://ui-lib.com" }],

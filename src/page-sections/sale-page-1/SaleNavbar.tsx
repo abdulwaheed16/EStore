@@ -17,7 +17,11 @@ export default function SaleNavbar({ saleCategoryList }: Props) {
 
   return (
     <Sticky fixedOn={0} onSticky={toggleIsFixed} scrollDistance={400}>
-      {!isFixed ? <Box display="none" /> : <Navbar saleCategoryList={saleCategoryList} />}
+      {!isFixed ? (
+        <Box display="none" />
+      ) : (
+        <Navbar saleCategoryList={saleCategoryList} />
+      )}
     </Sticky>
   );
 }

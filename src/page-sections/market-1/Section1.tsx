@@ -24,7 +24,8 @@ export default function Section1({ carouselData }: Props) {
             showDots={true}
             visibleSlides={1}
             showArrow={false}
-            totalSlides={carouselData.length}>
+            totalSlides={carouselData.length}
+          >
             {carouselData.map((item, index) => (
               <CarouselCard1
                 key={index}
