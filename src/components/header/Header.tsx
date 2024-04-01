@@ -45,7 +45,8 @@ export default function Header({ isFixed, className }: HeaderProps) {
           borderRadius="50%"
           alignItems="center"
           position="absolute"
-          justifyContent="center">
+          justifyContent="center"
+        >
           <Tiny color="white" fontWeight="600" lineHeight={1}>
             {state.cart.length}
           </Tiny>
@@ -62,7 +63,12 @@ export default function Header({ isFixed, className }: HeaderProps) {
 
   return (
     <StyledHeader className={className}>
-      <Container display="flex" alignItems="center" justifyContent="space-between" height="100%">
+      <Container
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        height="100%"
+      >
         <FlexBox className="logo" alignItems="center" mr="1rem">
           <Link href="/">
             <Image src="/assets/images/logo.svg" alt="logo" />
@@ -96,7 +102,8 @@ export default function Header({ isFixed, className }: HeaderProps) {
             width={380}
             position="right"
             handle={CART_HANDLE}
-            toggleSidenav={toggleSidenav}>
+            toggleSidenav={toggleSidenav}
+          >
             <MiniCart toggleSidenav={toggleSidenav} />
           </Sidenav>
         </FlexBox>
