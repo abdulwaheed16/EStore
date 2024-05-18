@@ -25,13 +25,13 @@ const NavbarRoot = styled(Card)<{
   "& .linkList": {
     transition: "all 0.2s",
     padding: "8px 20px",
-    "&:hover": { color: theme.colors.primary.main }
+    "&:hover": { color: theme.colors.primary.main },
   },
   ...(sidebarstyle === "style2" && {
     height: "100%",
     paddingBottom: 10,
-    backgroundColor: theme.colors.paste[50]
-  })
+    backgroundColor: theme.colors.paste[50],
+  }),
 }));
 
 const StyledList = styled(FlexBox)(({ theme }) => ({
@@ -40,26 +40,28 @@ const StyledList = styled(FlexBox)(({ theme }) => ({
   transition: "all 0.2s",
   "& .listCircle": { background: theme.colors.gray[600] },
   "&:hover": {
-    "& .listCircle": { background: theme.colors.primary.main }
-  }
+    "& .listCircle": { background: theme.colors.primary.main },
+  },
 }));
 
-const BorderBox = styled(FlexBox)<{ linestyle: "dash" | "solid" }>(({ linestyle, theme }) => ({
-  marginTop: 5,
-  marginBottom: 15,
-  "& span": { width: "100%" },
-  ...(linestyle === "dash" && {
-    borderBottom: "2px",
-    borderStyle: "none none dashed none",
-    borderColor: theme.colors.primary.main,
-    "& span": { display: "none" }
+const BorderBox = styled(FlexBox)<{ linestyle: "dash" | "solid" }>(
+  ({ linestyle, theme }) => ({
+    marginTop: 5,
+    marginBottom: 15,
+    "& span": { width: "100%" },
+    ...(linestyle === "dash" && {
+      borderBottom: "2px",
+      borderStyle: "none none dashed none",
+      borderColor: theme.colors.primary.main,
+      "& span": { display: "none" },
+    }),
   })
-}));
+);
 
 const ColorBorder = styled(Span)<{ grey?: any }>(({ grey, theme }) => ({
   borderRadius: "2px 0 0 2px",
   height: grey ? "2px" : "3px",
-  background: grey ? theme.colors.gray[400] : theme.colors.primary.main
+  background: grey ? theme.colors.gray[400] : theme.colors.primary.main,
 }));
 
 const Circle = styled("span")(() => ({
@@ -67,7 +69,7 @@ const Circle = styled("span")(() => ({
   height: "4px",
   marginLeft: "2rem",
   marginRight: "8px",
-  borderRadius: "3px"
+  borderRadius: "3px",
 }));
 
 // ==================================================================
@@ -86,7 +88,7 @@ export default function SideNavbar(props: SideNavbarProps) {
     navList,
     lineStyle = "solid",
     sidebarStyle = "style1",
-    sidebarHeight = "auto"
+    sidebarHeight = "auto",
   } = props;
 
   const renderChild = (childList: any[]) => {
@@ -104,7 +106,10 @@ export default function SideNavbar(props: SideNavbarProps) {
 
   return (
     <Scrollbar autoHide={false} sx={{ maxHeight: sidebarHeight }}>
-      <NavbarRoot isfixed={isFixed as boolean} sidebarstyle={sidebarStyle as any}>
+      <NavbarRoot
+        isfixed={isFixed as boolean}
+        sidebarstyle={sidebarStyle as any}
+      >
         {navList.map((item, ind) => {
           return (
             <Box key={ind}>
@@ -123,7 +128,11 @@ export default function SideNavbar(props: SideNavbarProps) {
                       <Accordion>
                         <AccordionHeader px={0} py={0.75} className="linkList">
                           <FlexBox alignItems="center">
-                            <Icon mr="10px" size="20px" defaultcolor="currentColor">
+                            <Icon
+                              mr="10px"
+                              size="20px"
+                              defaultcolor="currentColor"
+                            >
                               {item.icon}
                             </Icon>
                             <Span fontWeight="600" fontSize={14}>
@@ -135,9 +144,17 @@ export default function SideNavbar(props: SideNavbarProps) {
                         {item.child ? renderChild(item.child) : null}
                       </Accordion>
                     ) : (
-                      <NavLink key={item.title} href={item.href as string} color="grey.700">
+                      <NavLink
+                        key={item.title}
+                        href={item.href as string}
+                        color="grey.700"
+                      >
                         <FlexBox className="linkList" py={0.75}>
-                          <Icon mr="10px" size="20px" defaultcolor="currentColor">
+                          <Icon
+                            mr="10px"
+                            size="20px"
+                            defaultcolor="currentColor"
+                          >
                             {item.icon}
                           </Icon>
                           <Span fontWeight="600" fontSize={14}>

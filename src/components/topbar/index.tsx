@@ -41,12 +41,12 @@ export default function Topbar() {
 
           <FlexBox alignItems="center">
             <Icon size="14px">phone-call</Icon>
-            <span>+88012 3456 7894</span>
+            <span>+92 302 0540730</span>
           </FlexBox>
 
           <FlexBox alignItems="center" ml="20px">
             <Icon size="14px">mail</Icon>
-            <span>support@ui-lib.com</span>
+            <span>support@aw.com</span>
           </FlexBox>
         </FlexBox>
 

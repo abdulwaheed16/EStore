@@ -71,7 +71,8 @@ export default function Header({ isFixed, className }: HeaderProps) {
       >
         <FlexBox className="logo" alignItems="center" mr="1rem">
           <Link href="/">
-            <Image src="/assets/images/logo.svg" alt="logo" />
+            {/* <Image src="/assets/images/logo.svg" alt="logo" /> */}
+            <h1 className="">EShops</h1>
           </Link>
 
           {isFixed && (

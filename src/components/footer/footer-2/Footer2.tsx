@@ -18,15 +18,16 @@ export default function Footer2() {
     <footer>
       <Wrapper>
         <Link href="/">
-          <Image mb="1.5rem" src="/assets/images/logo.svg" alt="logo" />
+          {/* <Image mb="1.5rem" src="/assets/images/logo.svg" alt="logo" /> */}
+          <h1 className="">EShops</h1>
         </Link>
 
         <Grid container spacing={6}>
           <Grid item md={6} sm={6} xs={12}>
             <Paragraph mb="1.25rem" color="gray.500" maxWidth="370px">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor libero id et, in
-              gravida. Sit diam duis mauris nulla cursus. Erat et lectus vel ut sollicitudin elit at
-              amet.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
+              libero id et, in gravida. Sit diam duis mauris nulla cursus. Erat
+              et lectus vel ut sollicitudin elit at amet.
             </Paragraph>
 
             <AppStore />
@@ -51,7 +52,8 @@ export default function Footer2() {
                       size="small"
                       cursor="pointer"
                       borderRadius="50%"
-                      bg="rgba(0,0,0,0.2)">
+                      bg="rgba(0,0,0,0.2)"
+                    >
                       <Icon size="12px" defaultcolor="auto">
                         {item}
                       </Icon>
